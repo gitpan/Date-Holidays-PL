@@ -2,7 +2,7 @@ NAME
     Date::Holidays::PL - Determine holidays for Poland
 
 VERSION
-    version 0.01
+    version 1.110050
 
 SYNOPSIS
         use Date::Holidays::PL qw( pl_holidays is_pl_holiday
@@ -97,7 +97,7 @@ PUBLIC HOLIDAYS
 
         # New Year's Day
         Jan  1     Nowy Rok
-        # Epiphany (1951-1959 only)
+        # Epiphany (1951-1959, 2011+ only)
         Jan  6     Trzech Króli
         # Labor Day
         May  1     Święto Państwowe
@@ -127,9 +127,11 @@ PUBLIC HOLIDAYS
         # Corpus Christi
         +60 days   dzień Bożego Ciała
 
-    Based on Polish law (since year 1951): *Ustawa z dnia 18 stycznia 1951
-    r. o dniach wolnych od pracy*
-    <http://isap.sejm.gov.pl/DetailsServlet?id=WDU19510040028>.
+    Based on Polish law (since year 1951): Ustawa z dnia 18 stycznia 1951 r.
+    o dniach wolnych od pracy
+    <http://isap.sejm.gov.pl/DetailsServlet?id=WDU19510040028> and Ustawa z
+    dnia 24 września 2010 r. o zmianie ustawy - Kodeks pracy oraz niektórych
+    innych ustaw <http://isap.sejm.gov.pl/DetailsServlet?id=WDU20102241459>.
 
 EXPORTS
     Date::Holidays::PL uses Sub::Exporter to export following methods:
@@ -149,7 +151,7 @@ SEE ALSO
 
     *   Date::Holidays::Abstract
 
-    *   <http://pl.wikipedia.org/wiki/Dni_wolne_od_pracy>
+    *   <http://pl.wikipedia.org/wiki/Dni_wolne_od_pracy_w_Polsce>
 
 AUTHOR
     Alex J. G. Burzyński <ajgb@cpan.org>

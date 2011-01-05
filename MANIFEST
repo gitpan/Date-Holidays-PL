@@ -3,6 +3,7 @@ Changes
 INSTALL
 LICENSE
 MANIFEST
+META.json
 META.yml
 Makefile.PL
 README
@@ -16,4 +17,3 @@ t/release-no-tabs.t
 t/release-pod-coverage.t
 t/release-pod-syntax.t
 t/release-portability.t
-weaver.ini

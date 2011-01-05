@@ -1,6 +1,9 @@
 package Date::Holidays::PL;
 BEGIN {
-  $Date::Holidays::PL::VERSION = '0.01';
+  $Date::Holidays::PL::AUTHORITY = 'cpan:AJGB';
+}
+BEGIN {
+  $Date::Holidays::PL::VERSION = '1.110050';
 }
 # ABSTRACT: Determine holidays for Poland
 
@@ -27,7 +30,7 @@ my %SharedHolidays = map {
     $_ => 1
 } qw( 0101 0501 1101 1225 1226 );
 
-# law changes in 1951, 1960, 1989 and 1990
+# law changes in 1951, 1960, 1989, 1990 and 2011
 my %ChangesByYear = (
     (
         map {
@@ -50,9 +53,14 @@ my %ChangesByYear = (
         map { $_ => 1 } qw( 0722 0815 1111 )
     },
     # since 1990
-    'CURRENT' => {
+    1990 => {
         %SharedHolidays,
         map { $_ => 1 } qw( 0503 0815 1111 )
+    },
+    # since 2011
+    'CURRENT' => {
+        %SharedHolidays,
+        map { $_ => 1 } qw( 0106 0503 0815 1111 )
     },
 );
 # always on those dates
@@ -247,7 +255,7 @@ Date::Holidays::PL - Determine holidays for Poland
 
 =head1 VERSION
 
-version 0.01
+version 1.110050
 
 =head1 SYNOPSIS
 
@@ -360,7 +368,7 @@ The following Polish holidays have fixed dates:
 
     # New Year's Day
     Jan  1     Nowy Rok
-    # Epiphany (1951-1959 only)
+    # Epiphany (1951-1959, 2011+ only)
     Jan  6     Trzech Króli
     # Labor Day
     May  1     Święto Państwowe
@@ -391,8 +399,9 @@ List of Polish moveable feasts:
     +60 days   dzień Bożego Ciała
 
 Based on Polish law (since year 1951):
-I<Ustawa z dnia 18 stycznia 1951 r. o dniach wolnych od pracy>
-L<http://isap.sejm.gov.pl/DetailsServlet?id=WDU19510040028>.
+L<Ustawa z dnia 18 stycznia 1951 r. o dniach wolnych od pracy|http://isap.sejm.gov.pl/DetailsServlet?id=WDU19510040028>
+and
+L<Ustawa z dnia 24 września 2010 r. o zmianie ustawy - Kodeks pracy oraz niektórych innych ustaw|http://isap.sejm.gov.pl/DetailsServlet?id=WDU20102241459>.
 
 =head1 EXPORTS
 
@@ -434,7 +443,7 @@ L<Date::Holidays::Abstract>
 
 =item *
 
-L<http://pl.wikipedia.org/wiki/Dni_wolne_od_pracy>
+L<http://pl.wikipedia.org/wiki/Dni_wolne_od_pracy_w_Polsce>
 
 =back
 

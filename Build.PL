@@ -21,7 +21,7 @@ my %module_build_args = (
     'Alex J. G. Burzyński <ajgb@cpan.org>'
   ],
   'dist_name' => 'Date-Holidays-PL',
-  'dist_version' => '0.01',
+  'dist_version' => '1.110050',
   'license' => 'perl',
   'module_name' => 'Date::Holidays::PL',
   'recommends' => {},
